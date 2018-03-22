@@ -10,6 +10,8 @@ import {
 import HomeScreen from "../components/HomeScreen";
 import LoginScreen from "../components/LoginScreen";
 import AuthLoadingScreen from "../components/AuthLoadingScreen";
+import AddContactScreen from "../components/AddContactScreen";
+import ContactDetailScreen from "../components/ContactDetailScreen";
 import { addListener } from "../utils/redux";
 
 const navigationConfig = {
@@ -26,7 +28,11 @@ const navigationConfig = {
 };
 
 const AppStack = StackNavigator(
-  { Home: { screen: HomeScreen } },
+  {
+    Home: { screen: HomeScreen },
+    Add: { screen: AddContactScreen },
+    Detail: { screen: ContactDetailScreen }
+  },
   navigationConfig
 );
 const AuthStack = StackNavigator(
